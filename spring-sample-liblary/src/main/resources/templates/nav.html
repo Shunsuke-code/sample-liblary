@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<nav>
+	<ul>
+		<li>
+			<a href="/book">全表示</a>
+		</li>
+		<li th:each="category:${categories}">
+		<a th:href="'book?categoryId='+${category.id}"
+		   th:text="${category.name}">
+		</a>
+		</li>
+	</ul>
+</nav>
+
+
+</body>
+</html>

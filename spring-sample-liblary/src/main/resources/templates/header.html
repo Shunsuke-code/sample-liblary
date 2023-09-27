@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+	<h1>サンプル図書</h1>
+	[[${@account.name}]]さんがログイン中
+	<form action="/logout" method="get">
+		<button>ログアウト</button>
+	</form>
+</header>
+</body>
+</html>
