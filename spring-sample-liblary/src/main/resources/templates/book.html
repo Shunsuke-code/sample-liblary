@@ -9,6 +9,7 @@
 <nav th:replace="nav"></nav>
 
 <main>
+	<a href="/BookCart" style="padding-left: 10px;">カートを見る</a>
 	
 	<div th:each="book:${books}">
 		<p th:text="${book.id}"></p>
@@ -16,7 +17,7 @@
 		,<img src="/images/cat.jpg"><br>
 		<h3>著者：<span th:text="${book.author}"></span></h3>
 		<h4>カテゴリー：<span th:text="${book.categoryName}"></span></h4>
-		 <form action="" method="">
+		 <form action="/book/add" method="post">
 				 <input type="hidden" name="bookId" th:value="${book.id}">
 				 <button>借りる</button>
 		 </form>
